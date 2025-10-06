@@ -1,0 +1,158 @@
+/* 1. Global Reset */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* 2. The Main Waybar Window */
+window#waybar {
+    background-color: rgba(42, 49, 42, 0.8);
+    border-radius: 6px;
+    color: #ffffff;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* --- MODULE STYLES --- */
+
+/* 3. Style for Individual Modules */
+#custom-launcher,
+#clock,
+#cpu,
+#mpris {
+    padding: 0 8px;
+    margin: 2px 0;
+}
+
+/* 4. Custom Launcher (Arch Logo) */
+#custom-launcher { /* <--- THIS WAS THE FIX FOR THE SYNTAX ERROR */
+    background-image: linear-gradient(180deg, 
+        rgba(60, 56, 54, 0.85), /* Earthy Brown */
+        rgba(42, 49, 42, 0.85)  /* Forest Green */
+    );
+    color: #e0e2e0; /* Brighter text color to stand out */
+    border-radius: 6px;
+    margin-left: 3px;
+}
+
+#custom-launcher:hover {
+    font-family: "JetBrainsMono Nerd Font"; 
+    background-image: none;
+    background-color: #2E8B57;
+    color: #1a2b27;
+}
+
+/* 5. Clock, CPU, and MPRIS Modules */
+#clock,
+#pulseaudio,
+#cpu,
+#mpris {
+    margin-right: 3px;
+}
+
+/* 6. Taskbar and Buttons */
+#taskbar {
+    margin-left: 6px;
+}
+
+#taskbar button {
+    color: #ffffff;
+    padding: 0 6px;
+    font-size: 10px;
+    margin: 2px 2px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+#taskbar button:hover {
+    background-color: rgba(169, 182, 169, 0.15);
+}
+
+#taskbar button.active {
+    background-color: rgba(169, 182, 169, 0.25);
+    color: #e0e2e0;
+}
+
+#clock {
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#custom-mpris {
+    padding: 0 15px;
+    min-width: 200px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#custom-power {
+    border: 1.5px solid #45573D;
+    background-color: #22311d;
+    color:#98A869;
+    padding: 0 12px;
+    margin: 3px 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#custom-power:hover {
+    background-color: #2E8B57;
+    color: #1a2b27;
+}
+
+#workspaces {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 2px 5px;
+  padding: 0 6px;
+}
+
+#workspaces button {
+  color: #314528;
+  background: transparent;
+  transition: color 0.3s ease;
+}
+
+#workspaces button.occupied {
+  color: #A6E3A1;
+}
+
+#workspaces button.active {
+  background-color: #ECEEEB;
+  color: #314528;
+  border-radius: 10px;
+  padding: 0px 7.5px 0px 6px;
+}
+
+#workspaces button:hover {
+  color: #45573D;
+}
+
+#workspaces button.active:hover {}
+
+/* --- Enlarge Icons in Specific Modules --- */
+#custom-launcher,
+#cpu,
+#custom-power {
+    font-size: 15px;
+}
+
+/* --- THIS IS THE CORRECTED CAVA STYLE --- */
+#custom-cava {
+  font-family: "CaskaydiaCove Nerd Font"; /* Use a Nerd Font to render the bars */
+  border-radius: 0px;
+  color: #ebdbb2;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+}

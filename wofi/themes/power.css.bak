@@ -1,0 +1,45 @@
+/* Wofi style for the Misty Forest Power Menu */
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 16px;
+}
+
+window {
+    background-color: rgba(42, 49, 42, 0.8);
+    border: 2px solid #2e4d44;     /* Lighter Border Green */
+    border-radius: 10px;
+}
+
+/* Style for the search bar */
+#input {
+    margin: 10px;
+    border: none;
+    color: #cdd1c4;               /* Misty Text */
+    background-color: #2e4d44;   /* Lighter Green Background for input */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#inner-box {
+    margin: 5px;
+}
+
+#outer-box {
+    margin: 5px;
+}
+
+/* Style for individual entries */
+#entry {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#text {
+    color: #cdd1c4; /* Misty Text */
+}
+
+/* Style for the selected entry */
+#entry:selected {
+    background-color: #6b8a7a; /* Mossy Green Accent */
+    color: #1a2b27;            /* Dark text on selection */
+}

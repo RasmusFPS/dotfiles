@@ -1,0 +1,189 @@
+/* --- Elden Ring: The Fading Age Theme --- */
+
+/* 1. Global Reset */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* 2. The Main Waybar Window */
+window#waybar {
+    background-color: rgba(27, 28, 32, 0.85); /* Abyssal Dark */
+    border-radius: 6px;
+    color: #EAE3DA; /* Aged White */
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* --- MODULE STYLES --- */
+
+/* 3. Style for Individual Modules */
+#custom-launcher {
+  padding: 0 2px;
+
+}
+
+
+#clock,
+#cpu,
+#mpris {
+    color: #EAE3DA;
+    padding: 0 8px;
+    margin: 2px 0;
+}
+
+/* 4. Custom Launcher (Elden Ring Icon) */
+#custom-launcher {
+    /* Makes the placeholder dot invisible */
+    color: transparent;
+
+    /* --- Image Settings --- */
+    background-image: url("/home/rasmusfps/Pictures/Icon/bonfire.png");
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* --- Spacing and Sizing --- */
+    min-width: 30px; 
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+#custom-launcher:hover {
+    background-color: rgba(232, 163, 66, 0.2); 
+}
+
+/* 5. Clock, CPU, and MPRIS Modules */
+#clock,
+#pulseaudio,
+#cpu,
+#mpris {
+    margin-right: 3px;
+}
+
+/* 6. Taskbar and Buttons */
+#taskbar {
+    margin-left: 6px;
+}
+
+#taskbar button {
+    color: #A38C7A; /* Ashen Haze */
+    padding: 0 6px;
+    font-size: 10px;
+    margin: 2px 2px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+#taskbar button:hover {
+    background-color: rgba(67, 72, 76, 0.25); /* Shadowed Cliff */
+}
+
+#taskbar button.active {
+    background-color: rgba(107, 102, 98, 0.35); /* Ruin Stone */
+    color: #E8A342; /* Smoldering Gold */
+}
+
+#clock {
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #EAE3DA; /* Aged White */
+}
+
+#custom-mpris {
+    padding: 0 15px;
+    min-width: 200px;
+    color: #EAE3DA; /* Aged White */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#custom-power {
+    border: 1.5px solid #4A4C3D; /* Faded Pine */
+    background-color: #1B1C20; /* Abyssal Dark */
+    color: #A38C7A; /* Ashen Haze */
+    padding: 0 12px;
+    margin: 3px 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    
+    /* FIX THE POWER ICON POS */
+    padding-left: 9px;
+    padding-right: 12px;
+    
+}
+
+#custom-power:hover {
+    background-color: #E8A342; /* Smoldering Gold */
+    color: #1B1C20; /* Abyssal Dark */
+}
+
+#workspaces {
+  background: rgba(27, 28, 32, 0.5); /* Abyssal Dark */
+  border-radius: 10px;
+  margin: 2px 5px;
+  padding: 0 6px;
+}
+
+#workspaces button {
+  color: #6B6662; /* Ruin Stone */
+  background: transparent;
+  transition: color 0.3s ease;
+}
+
+#workspaces button.occupied {
+  color: #A38C7A; /* Ashen Haze */
+}
+
+#workspaces button.active {
+  background-color: #E8A342; /* Smoldering Gold */
+  color: #1B1C20; /* Abyssal Dark */
+  border-radius: 10px;
+  padding: 0px 7px;
+}
+
+#workspaces button:hover {
+  color: #EAE3DA; /* Aged White */
+}
+
+#workspaces button.active:hover {}
+
+/* --- Enlarge Icons in Specific Modules --- */
+#custom-launcher,
+#cpu,
+#custom-power {
+    font-size: 15px;
+}
+
+/* --- CAVA Visualizer Style --- */
+#custom-cava {
+  font-family: "CaskaydiaCove Nerd Font";
+  border-radius: 0px;
+  color: #E8A342; /* Smoldering Gold */
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+/* --- Temperature Module Style --- */
+#temperature {
+    color: #A38C7A; /* Ashen Haze */
+    padding: 0 8px;
+    margin-right: 3px;
+}
+
+/* This style is applied when the temperature is over the "critical-threshold" (80°C) */
+#temperature.critical {
+    background-color: #9E2B25; /* Use a "Scarlet Rot" color for danger */
+    color: #EAE3DA; /* Aged White for contrast */
+    border-radius: 4px; /* Optional: give it a background shape */
+}

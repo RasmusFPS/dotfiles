@@ -1,0 +1,80 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 29,
+    "modules-left": ["custom/launcher", "hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/cava","pulseaudio", "mpris", "cpu", "temperature", "custom/power"],
+    
+    "hyprland/workspaces": {
+    "all-outputs": true,
+    "on-click": "activate"
+    },
+
+    "custom/launcher": {
+        "format": ".",
+        "on-click": "wofi --show drun",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false,
+        "on-click": "kitty btop"
+    },
+
+    "temperature": {
+      // This tells Waybar to look for the 'k10temp' sensor, which is your CPU.
+      "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+      "critical-threshold": 80,
+      "format": "{temperatureC}°C ",
+      "format-critical": "{temperatureC}°C "
+    },
+
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "player-icons": {
+            "default": "▶",
+            "mpv": "🎵",
+            "spotify": ""
+        },
+        "status-icons": {
+            "playing": "▶",
+            "paused": "⏸"
+        },
+        "max-length": 50
+    },
+
+    "custom/power": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+
+    // --- THIS IS THE CORRECTED CAVA MODULE ---
+    "custom/cava": {
+        "exec": "/home/rasmusfps/.config/waybar/scripts/cava.sh",
+        "return-type": "json",
+        "format": "{text}"
+        // Temporarily removed on-click to ensure it works. You can add it back.
+        // "on-click": "kitty -c ~/.config/dotfiles/kitty/kitty.conf nvim -c cd ~/.config/dotfiles/"
+    },
+
+    "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " Muted",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "scroll-step": 5, // Not strictly necessary with the commands above, but good practice
+    "format-icons": {
+        "default": ["", "", ""] // Icons for low, medium, high volume
+    },
+    "tooltip-format": "{desc} ({volume}%)"
+    }
+}

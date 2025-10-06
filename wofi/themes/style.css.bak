@@ -1,0 +1,49 @@
+/* --- Misty Forest Theme --- */
+
+#window {
+    /* A deep, dark, desaturated forest green with high transparency */
+    background-color: rgba(42, 49, 42, 0.8);
+    
+    border-radius: 10px;
+    /* An earthy, dark brown border, like tree bark */
+    border: 2px solid #3c3836;
+}
+
+#input {
+    /* A darker, more opaque input field, like a shadow */
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #d5c4a1; /* A warmer, off-white text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#inner-box {
+    margin: 5px;
+}
+
+#entry {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#entry:selected {
+    /* The highlight is a translucent, misty green "glow" */
+    background-color: rgba(169, 182, 169, 0.25);
+}
+
+#text {
+    /* A soft, desaturated green-grey for the text */
+    color: #a9b6a9;
+}
+
+#text:selected {
+    /* The selected text becomes brighter and crisper, like moonlight */
+    color: #e0e2e0;
+}
+
+#img {
+    margin-right: 10px;
+    min-width: 32px;
+}

@@ -1,0 +1,6 @@
+# Show applications from .desktop files
+mode=drun
+# Allow Wofi to display images and icons
+allow_images=true
+# Set the size of the icons to 32 pixels
+icon_size=32

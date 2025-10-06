@@ -1,0 +1,45 @@
+/* Wofi style for the Fading Age Power Menu */
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 16px;
+}
+
+window {
+    background-color: rgba(27, 28, 32, 0.85); /* Abyssal Dark */
+    border: 2px solid #43484C;     /* Shadowed Cliff */
+    border-radius: 10px;
+}
+
+/* Style for the search bar */
+#input {
+    margin: 10px;
+    border: none;
+    color: #EAE3DA;               /* Aged White */
+    background-color: rgba(27, 28, 32, 0.5);   /* Abyssal Dark */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#inner-box {
+    margin: 5px;
+}
+
+#outer-box {
+    margin: 5px;
+}
+
+/* Style for individual entries */
+#entry {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#text {
+    color: #A38C7A; /* Ashen Haze */
+}
+
+/* Style for the selected entry */
+#entry:selected {
+    background-color: rgba(232, 163, 66, 0.25); /* Smoldering Gold */
+    color: #EAE3DA;            /* Aged White text on selection */
+}

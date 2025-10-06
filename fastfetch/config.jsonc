@@ -1,0 +1,70 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    // Tell fastfetch to use your custom ASCII art file.
+    // The '~' represents your home directory.
+    "source": "~/.config/fastfetch/elden_ring.txt",
+
+    // Set the colors for your ASCII art.
+    // If your art has multiple colors defined in the file, you can
+    // assign a different hex code to "2", "3", etc.
+    // For now, we'll make the whole thing "Smoldering Gold".
+    "color": {
+      "1": "#E8A342", // Smoldering Gold
+      "2": "#E8A342",
+      "3": "#E8A342",
+      "4": "#E8A342",
+      "5": "#E8A342",
+      "6": "#E8A342"
+    }
+  },
+  "display": {
+    "color": {
+      // Sets the color for the main title (e.g., your-user@your-host)
+      "title": "#E8A342", // Smoldering Gold
+
+      // Sets the color for all the module keys (e.g., OS, Kernel, Uptime)
+      "keys": "#E8A342" // Smoldering Gold
+    }
+  },
+  "modules": [
+    // --- Title & Separator ---
+    "title",
+    {
+      "type": "separator",
+      "string": "-----------",
+      "color": "#A38C7A" // Ashen Haze
+    },
+
+    // --- System Information Modules ---
+    // The main text color ("Aged White") is inherited from your terminal's
+    // default foreground color. Set it to #EAE3DA in your terminal settings.
+    "os",
+    "host",
+    "kernel",
+    "packages",
+    "shell",
+    "display",
+    "de",
+    "wm",
+    "wmtheme",
+    "theme",
+    "icons",
+    "font",
+    "cursor",
+    "terminal",
+    "terminalfont",
+
+    // --- Hardware Information Modules ---
+    {
+      "type": "separator",
+      "string": "-----------",
+      "color": "#6B6662" // Ruin Stone
+    },
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    "break"
+  ]
+}

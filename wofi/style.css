@@ -1,0 +1,49 @@
+/* --- Elden Ring: The Fading Age Theme --- */
+
+#window {
+    /* The deep, dark color of the abyss, with high transparency */
+    background-color: rgba(27, 28, 32, 0.85); /* Abyssal Dark */
+    
+    border-radius: 10px;
+    /* The color of a dark, shadowed cliff face */
+    border: 2px solid #43484C; /* Shadowed Cliff */
+}
+
+#input {
+    /* A more opaque input field, like a deeper shadow */
+    background-color: rgba(27, 28, 32, 0.5); /* Abyssal Dark */
+    color: #EAE3DA; /* A warmer, aged white text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#inner-box {
+    margin: 5px;
+}
+
+#entry {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#entry:selected {
+    /* The highlight is a translucent "glow" of smoldering gold */
+    background-color: rgba(232, 163, 66, 0.25); /* Smoldering Gold */
+}
+
+#text {
+    /* A soft, dusty color for the text, like ashen haze */
+    color: #A38C7A; /* Ashen Haze */
+}
+
+#text:selected {
+    /* The selected text becomes brighter and crisper, like aged parchment */
+    color: #EAE3DA; /* Aged White */
+}
+
+#img {
+    margin-right: 10px;
+    min-width: 32px;
+}
